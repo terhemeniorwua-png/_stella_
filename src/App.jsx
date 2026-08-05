@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
+import Nav from './Component/Nav/Nav'
+import Logo from './Component/Nav/Header'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,8 +10,11 @@ function App() {
   return (
     <>
       
+     <div className='flex justify-between px-10 items-center'>
+     <Logo />
+      <Nav />
+     </div>
 
-      
     </>
   )
 }
