@@ -12,10 +12,12 @@ function Nav(){
               <div className="flex items-center gap-5">
                   <BiCart className="text-[20px]"/>
                 <BiHeart className="text-[20px]"/>
+
                 <ReactCountryFlag
                 countryCode="US"
                
-                /> <span className="text-sm">English <BiChevronDown className="float-right text-xl"/></span>  
+                />
+                 <span className="text-sm">English <BiChevronDown className="float-right text-xl"/></span>  
               </div>
 
 
