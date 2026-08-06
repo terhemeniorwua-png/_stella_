@@ -1,5 +1,4 @@
 import { BiCart, BiCartAdd, BiChevronDown, BiHeart } from "react-icons/bi"
-import { FaCartArrowDown, FaCartPlus } from "react-icons/fa"
 import { FaFlagUsa } from "react-icons/fa6"
 import ReactCountryFlag from "react-country-flag";
 
@@ -9,12 +8,13 @@ function Nav(){
 
     return (
         <>
-            <div className="text-3xl grid grid-cols-2 gap-5 pt-5">
+            <div className="text-3xl grid grid-cols-2 gap-5">
               <div className="flex items-center gap-5">
-                  <BiCart />
-                <BiHeart />
+                  <BiCart className="text-[20px]"/>
+                <BiHeart className="text-[20px]"/>
                 <ReactCountryFlag
                 countryCode="US"
+               
                 /> <span className="text-sm">English <BiChevronDown className="float-right text-xl"/></span>  
               </div>
 

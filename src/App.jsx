@@ -3,6 +3,7 @@ import './App.css'
 import Nav from './Component/Nav/Nav'
 import Logo from './Component/Nav/Header'
 import Heade from './Component/Headerr/Head'
+import Hero from './Component/Hero/Hero'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
      <Logo />
       <Nav />
      </div>
+     <Hero />
 
     </>
   )

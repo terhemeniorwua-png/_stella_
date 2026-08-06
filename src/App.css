@@ -1,0 +1,7 @@
+.bg{
+    background: url(assets/heroImg.png), #02984882;
+    background-repeat: no-repeat;
+    background-position: 1px;
+    background-position-y: -15em;
+
+}
