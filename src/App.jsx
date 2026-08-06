@@ -9,17 +9,16 @@ import Product from './Component/sidebar/SidebarFilter'
 
 
 function App() {
-  const [title, setTtile] = useState('');
 
-  useEffect(
-    ()=>{
-      async function getTitle(){
-        let res = await fetApi()
-        setTtile(res.title)
-      }
-      getTitle()
-    }, []
-  )
+  const [data, setData] = useState(null)
+
+  useEffect( () =>{
+    fetApi()
+     .then(user =>{
+      setData(user)
+    }
+   )
+  }, [])
 
   return (
     <>
@@ -31,7 +30,7 @@ function App() {
      <Hero />
     <div className='grid grid-cols-3'>
       <Product />
-      <Clothes name={title}/>
+       {data && <Clothes name= { data }/>}
 
       
     </div>
