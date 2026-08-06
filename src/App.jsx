@@ -28,7 +28,7 @@ function App() {
       <Nav />
      </div>
      <Hero />
-    <div className='grid grid-cols-3'>
+    <div className='grid grid-cols-3 mt-5 justify-center'>
       <Product />
        {data && <Clothes name= { data }/>}
 
