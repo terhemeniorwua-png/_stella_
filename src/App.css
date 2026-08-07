@@ -7,5 +7,10 @@
 }
 
 .card{
+    text-align: left;
     
+}
+
+.label{
+    font-size: 12px;
 }

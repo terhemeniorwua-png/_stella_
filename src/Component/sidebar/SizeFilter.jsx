@@ -12,7 +12,7 @@ const sizes = [
 ];
 
 export default function SizeFilter() {
-  const [selected, setSelected] = useState("XXS");
+//   const [selected, setSelected] = useState("XXS");
 
   return (
     <div className="border-b py-5">
@@ -25,13 +25,7 @@ export default function SizeFilter() {
         {sizes.map((size) => (
           <button
             key={size}
-            onClick={() => setSelected(size)}
-            className={`rounded border py-2 transition
-            ${
-              selected === size
-                ? "border-cyan-500 bg-cyan-50"
-                : ""
-            }`}
+            className={`rounded border py-2 transition`}
           >
             {size}
           </button>

@@ -6,6 +6,7 @@ import Hero from './Component/Hero/Hero'
 import Clothes, { fetApi } from './Component/marketing/Clothes'
 import { useEffect, useState } from "react";
 import Product from './Component/sidebar/SidebarFilter'
+import SemiNav from './Component/SemiNav'
 
 
 function App() {
@@ -28,7 +29,8 @@ function App() {
       <Nav />
      </div>
      <Hero />
-    <div className='grid grid-cols-3 mt-5 justify-center'>
+     <SemiNav />
+    <div className='grid grid-cols-3 justify-center'>
       <Product />
        {data && <Clothes name= { data }/>}
 

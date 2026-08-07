@@ -15,7 +15,6 @@ const colors = [
 ];
 
 export default function ColorFilter() {
-  const [selected, setSelected] = useState("#000");
 
   return (
     <div className="pt-5">
@@ -28,12 +27,8 @@ export default function ColorFilter() {
         {colors.map((color) => (
           <button
             key={color}
-            onClick={() => setSelected(color)}
-            className={`h-6 w-6 rounded-full border-2 ${
-              selected === color
-                ? "border-cyan-500"
-                : "border-gray-200"
-            }`}
+            // onClick={() => setSelected(color)}
+            className={`h-6 w-6 rounded-full border-0`}
             style={{ backgroundColor: color }}
           />
         ))}

@@ -45,7 +45,7 @@ const brands = [
 ];
 
 export default function BrandFilter() {
-  const [selected, setSelected] = useState("Nike");
+  // const [selected, setSelected] = useState("Nike");
 
   return (
     <div className="border-b pb-5">
@@ -67,13 +67,15 @@ export default function BrandFilter() {
       </div>
 
       <div className="space-y-4">
+         
         {brands.map((brand) => (
           <div
             key={brand.id}
-            onClick={() => setSelected(brand.name)}
             className="flex cursor-pointer items-center justify-between"
+            
           >
             <div className="flex items-center gap-3">
+             
               <img
                 src={brand.logo}
                 className="h-6 w-6 object-contain"
@@ -86,12 +88,8 @@ export default function BrandFilter() {
               </span>
             </div>
 
-            {selected === brand.name && (
-              <Check
-                size={18}
-                className="text-cyan-500"
-              />
-            )}
+             
+         
           </div>
         ))}
       </div>
