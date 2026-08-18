@@ -11,29 +11,35 @@ import SemiNav from './Component/SemiNav'
 
 function App() {
 
+
   const [data, setData] = useState(null)
+
+  const [cart, setCart] = useState([])
 
   useEffect( () =>{
     fetApi()
      .then(user =>{
+      // console.log(user)
       setData(user)
     }
    )
   }, [])
+
 
   return (
     <>
       <Heade />
      <div className='flex justify-between px-10 items-center'>
      <Logo />
-      <Nav />
+     
+      <Nav Cart={cart}/>
      </div>
      <Hero />
   <div className='px-10'>
        <SemiNav />
     <div className='grid grid-cols-3 justify-center'>
       <Product />
-       {data && <Clothes name= { data }/>}
+       {data && <Clothes name= { data } Cart={setCart}/>}
 
       
     </div>

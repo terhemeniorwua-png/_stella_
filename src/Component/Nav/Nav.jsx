@@ -1,16 +1,23 @@
 import { BiCart, BiChevronDown, BiHeart } from "react-icons/bi"
 import ReactCountryFlag from "react-country-flag";
+import CartPopup from "../marketing/CartPopup";
 
 
 
-function Nav(){
+function Nav({Cart}){
 
+     const displayCart = () =>{
+        document.getElementById('cart').classList.toggle('hidden')
+        
+    }
+   
     return (
         <>
             <div className="text-3xl grid grid-cols-2 gap-5">
               <div className="flex items-center gap-5 text-[36px] relative">
-                <p className="bg-red-500 px-1 text-sm rounded-full absolute bottom-4 left-4 text-white cursor-pointer">0</p>
-                  <BiCart className="cursor-pointer"/>
+                <p className="bg-red-500 px-1 text-sm rounded-full absolute bottom-4 left-4 text-white cursor-pointer" onClick={displayCart}>{Cart.length}</p>
+
+                  <BiCart className="cursor-pointer" onClick={displayCart}/>
                 <BiHeart className="hover:text-red-400 cursor-pointer"/>
 
                 <ReactCountryFlag
@@ -30,7 +37,8 @@ function Nav(){
                 </div>
             </div>
 
-            
+
+            <CartPopup Cart={Cart} />
         </>
     )
 }
