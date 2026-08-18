@@ -29,13 +29,16 @@ function App() {
       <Nav />
      </div>
      <Hero />
-     <SemiNav />
+  <div className='px-10'>
+       <SemiNav />
     <div className='grid grid-cols-3 justify-center'>
       <Product />
        {data && <Clothes name= { data }/>}
 
       
     </div>
+  </div>
+
     </>
   )
 }

@@ -19,7 +19,6 @@ export default function PriceFilter() {
 
       <div className="mt-5 flex gap-3">
         <input
-          value="2900"
           className="w-full rounded border p-2"
         />
 
