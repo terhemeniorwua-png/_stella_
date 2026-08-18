@@ -29,7 +29,7 @@ const CartPopup = ({Cart}) => {
                     <p className="text-sm">Category: {item.category}</p>
                     <p className="text-sm">Price: {item.price}</p>
                     <p className="text-sm">
-                       <p className={handleColor}> 
+                       <p className="flex items-center"> 
                         <FaStar />
                         <FaStar />
                         <FaStar />
