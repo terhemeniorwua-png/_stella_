@@ -30,9 +30,9 @@ function App() {
     <>
       <Heade />
      <div className='flex justify-between px-10 items-center'>
-     <Logo />
+     <Logo Product={data}/>
      
-      <Nav Cart={cart}/>
+      <Nav Cart={cart} setCart={setCart}/>
      </div>
      <Hero />
   <div className='px-10'>

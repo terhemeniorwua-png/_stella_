@@ -4,7 +4,7 @@ import CartPopup from "../marketing/CartPopup";
 
 
 
-function Nav({Cart}){
+function Nav({Cart, setCart}){
 
      const displayCart = () =>{
         document.getElementById('cart').classList.toggle('hidden')
@@ -17,8 +17,11 @@ function Nav({Cart}){
               <div className="flex items-center gap-5 text-[36px] relative">
                 <p className="bg-red-500 px-1 text-sm rounded-full absolute bottom-4 left-4 text-white cursor-pointer" onClick={displayCart}>{Cart.length}</p>
 
-                  <BiCart className="cursor-pointer" onClick={displayCart}/>
-                <BiHeart className="hover:text-red-400 cursor-pointer"/>
+                  <BiCart className="cursor-pointer hover:text-amber-600" onClick={displayCart}/>
+                <BiHeart className="hover:text-red-400 cursor-pointer" id="heart" onClick={()=>{
+                        alert('Thank you for liking our page')
+                    document.getElementById('heart').classList.toggle('text-red-500')
+                }}/>
 
                 <ReactCountryFlag
                 countryCode="US"
@@ -38,7 +41,7 @@ function Nav({Cart}){
             </div>
 
 
-            <CartPopup Cart={Cart} />
+            <CartPopup Cart={Cart} setCart={setCart}/>
         </>
     )
 }

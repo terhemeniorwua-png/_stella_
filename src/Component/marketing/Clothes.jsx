@@ -11,7 +11,7 @@ import { useEffect, useState } from "react"
 // fetApi()
 function Clothes({name, Cart}){
 
-      console.log(name)
+    //   console.log(name)
 
     return(
         <>
@@ -25,7 +25,7 @@ function Clothes({name, Cart}){
 
  // Product
                 
-               <div className="card" key={res.id}>
+               <div className="card group" key={res.id}>
                 <div className="rounded-lg  bg-amber-50 object-center px-5 py-2">
                     <div className="text-white bg-blue-300 py-1 text-center rounded-xl text-sm mb-5 w-[50%]">Now active</div>
                     <img src={res.image} alt="clothe" className="h-[18em] w-full"/>
@@ -43,7 +43,7 @@ function Clothes({name, Cart}){
                         <p className="text-red-500 font-bold">12 items in stock</p>
                     </div>
  {/* add to cart button */}
-                    <button className="border bg-blue-500 text-white mt-2 w-full py-2 rounded-3xl text-2xl font-bold cursor-pointer" onClick={()=>{
+                    <button className="border bg-blue-500 hover:bg-blue-600 text-white mt-2 w-full py-2 rounded-3xl text-2xl font-bold cursor-pointer hidden group-hover:block" onClick={()=>{
 
                         Cart(prevCart => [...prevCart, res])
                     }
